@@ -3,13 +3,14 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import "./Style.css";
 
-function Login() {
+function LogIn() {
   const [email_id, setEmail_id] = useState("");
   const [password, setPassword] = useState("");
   const [data, setData] = useState({});
   let history = useHistory();
 
-  function submitHandler() {
+  function submitHandler(e) {
+    e.preventDefault();
     const postData = {
       email_id,
       password,
@@ -18,16 +19,19 @@ function Login() {
       .post("https://develop.hipoz.com/api/commanloginuser", postData)
       .then((response) => {
         setData(response.data);
-        console.log(data);
+        console.log(response.data);
+        console.log(email_id, password);
+        // console.log(data);
         if (postData.email_id === "" && postData.password === "") {
           window.alert("Fill the blanks fields");
         } else if (data.statuscode === 422) {
           window.alert("Fill the correct email and password");
         } else {
-          history.push("/pro");
+          history.push("./pro");
         }
       });
   }
+  // console.log(data);
   return (
     <div>
       <h1 className="heading">Login ID and Password</h1>
@@ -55,4 +59,4 @@ function Login() {
     </div>
   );
 }
-export default Login;
+export default LogIn;

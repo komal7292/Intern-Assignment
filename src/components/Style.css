@@ -13,17 +13,17 @@ body {
   margin: auto;
   margin-top: 10%;
   padding: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: floralwhite;
 }
 
 .heading {
   text-align: center;
   margin: 30px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 .button {
-  font-style: 'Courier New', Courier, monospace;
+  font-style: "Courier New", Courier, monospace;
 }
 
 .getStyle {
@@ -33,6 +33,6 @@ body {
   margin: auto;
   margin-top: 10%;
   padding: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: floralwhite;
 }
